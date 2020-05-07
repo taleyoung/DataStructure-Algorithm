@@ -1,0 +1,15 @@
+<!-- 简单实现--基本原理 -->
+<input type="text" id="a" />
+<div id="b"></div>
+<script>
+  var obj = {};
+  Object.defineProperty(obj, "hello", {
+    set: function(value) {
+      // document.getElementById("a").value = value;
+      document.getElementById("b").innerHTML = value ? value : "";
+    }
+  });
+  document.addEventListener("keyup", function(e) {
+    obj.hello = e.target.value;
+  });
+</script>

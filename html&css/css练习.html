@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      .wrap {
+        display: flex;
+      }
+      .left {
+        width: 200px;
+        background-color: black;
+        height: 800px;
+      }
+      .main {
+        background-color: yellow;
+        height: 800px;
+        flex: 1;
+      }
+      .right {
+        width: 300px;
+        background-color: red;
+        height: 800px;
+      }
+
+      .rect {
+        width: 0;
+        height: 0;
+        border-width: 90px;
+        border-style: solid;
+        border-color: transparent transparent red transparent;
+      }
+      /* 画三角箭头（两个三角形） */
+      .top {
+        position: absolute;
+        right: 25px;
+        top: calc(50% - 25px);
+      }
+      .top:before,
+      .top:after {
+        position: absolute;
+        content: "";
+        border-bottom: 20px transparent dashed;
+        border-left: 20px #fff dashed;
+        border-right: 20px transparent dashed;
+        border-top: 20px transparent solid;
+      }
+      .top:after {
+        border-left: 20px #b22222 solid;
+      }
+      .top:before {
+        left: 5px;
+        border-left: 20px #fff solid;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="left"></div>
+      <div class="main"></div>
+      <div class="right"></div>
+    </div>
+    <!-- 画三角形 -->
+    <div class="rect"></div>
+    <!-- 画1px细线 -->
+    <div style="height:1px;overflow:hidden;background:red"></div>
+    <!--画三角箭头 -->
+    <i class="top"></i>
+  </body>
+</html>

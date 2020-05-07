@@ -1,0 +1,10 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - ReplaceBlank",
+            "request": "launch",
+            "mainClass": "ReplaceBlank"
+        }
+    ]
+}
